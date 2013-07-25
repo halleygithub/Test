@@ -9,11 +9,14 @@
 # Stephen Marsland, 2008
 
 # An algorithm to compute PCA. Not as fast as the NumPy implementation
+# COPY FROM WEB
+
 from pylab import *
 from numpy import *
 
 def pca(data,nRedDim=0,normalise=1):
-    
+   '''A PCA function'''
+   
     # Centre data
     m = mean(data,axis=0)
     data -= m
